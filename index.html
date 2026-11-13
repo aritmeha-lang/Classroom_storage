@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manajemen Kelas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader"><div class="spinner"></div><p>Memuat…</p></div>
+  <div id="toasts"></div>
+  <div id="modal"></div>
+
+  <section id="login" class="login" hidden>
+    <form id="login-form" class="card login-card fade">
+      <div class="logo-ph">🎓</div>
+      <h2>Masuk ke Kelas</h2>
+      <label>Username<input name="username" required autocomplete="username"></label>
+      <label>Password<input name="password" type="password" required autocomplete="current-password"></label>
+      <button class="btn full">Masuk</button>
+    </form>
+  </section>
+
+  <div id="app" hidden>
+    <aside class="sidebar">
+      <div class="brand"><img id="class-logo" alt="" hidden><b id="class-name">Kelas</b></div>
+      <nav id="nav"></nav>
+    </aside>
+    <div class="overlay" onclick="closeSidebar()"></div>
+    <main>
+      <header class="topbar">
+        <button id="menu" class="icon-btn" aria-label="Menu">☰</button>
+        <h1 id="title"></h1>
+        <div class="spacer"></div>
+        <button id="theme" class="icon-btn" title="Mode gelap">🌙</button>
+        <div class="user">
+          <img id="avatar" alt="" hidden>
+          <div><b id="user-name"></b><small id="user-role"></small></div>
+        </div>
+        <button id="logout" class="btn ghost sm">Keluar</button>
+      </header>
+      <div id="view"></div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
